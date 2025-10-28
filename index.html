@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samir Photography | Wedding Moments Captured Forever</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body class="m-0 p-0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-white text-2xl sm:text-3xl font-bold">Samir Photography</a>
+
+      <ul class="hidden md:flex space-x-4 lg:space-x-6 text-white font-medium text-base sm:text-lg">
+        <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+        <li><a href="#portfolio" class="hover:text-yellow-400 transition">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none text-2xl">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-80">
+      <ul class="flex flex-col space-y-3 p-4 text-white font-medium">
+        <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+        <li><a href="#portfolio" class="hover:text-yellow-400 transition">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="relative h-screen flex items-center justify-center bg-center bg-cover bg-[url('/asset/images/home.jpg')]">
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center"></div>
+
+    <!-- Animated text container -->
+    <div class="text-center relative z-10 text-white px-4 space-y-4 animate-fade-up">
+      <h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 opacity-0 transform translate-y-8">Capture
+        Moments, Create memories.</h2>
+      <p class="text-sm sm:text-base md:text-lg mb-6 opacity-0 transform translate-y-8">Let’s make your wedding memories
+        timeless and beautiful.</p>
+      <a href="#"
+        class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg opacity-0 transform translate-y-8 transition-all">Book
+        Your Session</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <div class="container mx-auto px-4 sm:px-6 py-8 max-w-6xl">
+    <div class="text-center mb-12 sm:mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 border border-pink-100">
+        <div class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></div>
+        <span class="text-pink-600 text-xs sm:text-sm font-medium tracking-wide">ABOUT SAMIR PHOTOGRAPHY</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+        Hi, I'm <span class="text-pink-500">Samir</span>
+      </h2>
+
+      <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        A passionate storyteller who believes every story has a unique tale waiting to be captured through the lens.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12 items-center">
+      <div class="order-2 lg:order-1 lg:col-span-2">
+        <div class="relative group">
+          <div
+            class="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100 shadow-xl">
+            <img src="/asset/images/about.jpg" alt="Samir" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3 order-1 lg:order-2 space-y-4 sm:space-y-6">
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">Capturing Love and Life</h3>
+        <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
+          Every wedding is a story filled with emotions, colors, and moments that deserve to be remembered forever.
+        </p>
+        <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
+          Whether it’s a quiet glance, a joyful laugh, or a tearful hug, I make sure no precious detail is missed.
+        </p>
+        <a href="#portfolio"
+          class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg transition-all">View
+          My Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-12 sm:py-16 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">Wedding Moments</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d8b25c0f9?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+          alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-pink-50 py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">Get in Touch</h3>
+      <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">Ready to capture your special day? Let’s make memories
+        together.</p>
+      <a href="mailto:samirphotography@email.com"
+        class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg transition-all">Contact
+        Me</a>
+    </div>
+  </section>
+
+  <footer class="bg-[#1F2937] text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <!-- Footer grid -->
+      <div class="grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-8">
+
+        <!-- Brand Info -->
+        <div class="flex flex-col space-y-2">
+          <div class="flex items-center space-x-2">
+            <div class="bg-pink-500 text-white font-semibold rounded-full h-8 w-8 flex items-center justify-center">SP
+            </div>
+            <span class="text-lg text-pink-500 font-bold">Samir Photography</span>
+          </div>
+          <p class="text-xs sm:text-sm text-green-500 flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg> Trusted by 500+ customers.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-bold text-white mb-2 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
+          <ul class="space-y-1 sm:space-y-2 text-white text-xs sm:text-sm">
+            <li><a href="#about" class="hover:text-pink-500 transition">About</a></li>
+            <li><a href="#portfolio" class="hover:text-pink-500 transition">Portfolio</a></li>
+            <li><a href="#contact" class="hover:text-pink-500 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="font-bold text-white mb-2 sm:mb-4 text-sm sm:text-base">Services</h3>
+          <ul class="space-y-1 sm:space-y-2 text-white text-xs sm:text-sm">
+            <li><a href="#" class="hover:text-pink-500 transition">Wedding Photography</a></li>
+            <li><a href="#" class="hover:text-pink-500 transition">Pre-Wedding Shoots</a></li>
+            <li><a href="#" class="hover:text-pink-500 transition">Event Coverage</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="font-bold text-white mb-2 sm:mb-4 text-sm sm:text-base">Get In Touch</h3>
+          <ul class="space-y-1 sm:space-y-2 text-white text-xs sm:text-sm">
+            <li><a href="mailto:samir@photography.com" class="hover:text-pink-500 transition">samir@photography.com</a>
+            </li>
+            <li><a href="tel:+1234567890" class="hover:text-pink-500 transition">+977 123-456-7890</a></li>
+            <li>Kathmandu, Nepal</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="border-t border-gray-700 pt-4 mt-4 flex flex-col sm:flex-row justify-between text-xs sm:text-sm text-gray-400 gap-2 sm:gap-0">
+        <p>&copy; 2025 Samir Photography. All rights reserved.</p>
+        <div class="flex flex-wrap gap-2 sm:gap-4">
+          <a href="#" class="hover:text-pink-500">Privacy Policy</a>
+          <a href="#" class="hover:text-pink-500">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.animate-fade-up > *');
+      elements.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.remove('opacity-0', 'translate-y-8');
+          el.classList.add('opacity-100', 'translate-y-0', 'transition-all', 'duration-1000', 'ease-out');
+        }, i * 300); // staggered animation
+      });
+    });
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-black', 'bg-opacity-70', 'backdrop-blur-md');
+      } else {
+        navbar.classList.remove('bg-black', 'bg-opacity-70', 'backdrop-blur-md');
+      }
+    });
+  </script>
+</body>
+
+</html>
