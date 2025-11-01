@@ -5,7 +5,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samir Photography | Wedding Moments Captured Forever</title>
+
   <link rel="stylesheet" href="src/style.css">
+
+  <!-- Preload hero background image -->
+  <link rel="preload" as="image" href="/asset/images/home.jpg">
+
+  <style>
+    /* Smooth hero background fade-in */
+    .hero-bg {
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .hero-bg.loaded {
+      opacity: 1;
+    }
+
+    /* Smooth fade-up animation for text */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body class="m-0 p-0 bg-pink-100">
@@ -37,20 +79,29 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section
-    class="relative h-screen flex items-center justify-center bg-center bg-cover bg-[url('/asset/images/home.jpg')]">
-    <div class="absolute inset-0 bg-black/50 flex items-center justify-center"></div>
+  <!-- ✅ Optimized Hero Section -->
+  <section class="relative h-screen flex items-center justify-center bg-black">
+    <!-- Background Image -->
+    <div class="hero-bg absolute inset-0 bg-center bg-cover" style="background-image: url('/asset/images/home.jpg');">
+    </div>
 
-    <!-- Animated text container -->
-    <div class="text-center relative z-10 text-white px-4 space-y-4 animate-fade-up">
-      <h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 opacity-0 transform translate-y-8">Capture
-        Moments, Create memories.</h2>
-      <p class="text-sm sm:text-base md:text-lg mb-6 opacity-0 transform translate-y-8">Let’s make your wedding memories
-        timeless and beautiful.</p>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative text-center text-white px-4 space-y-4 z-10">
+      <h2 class="fade-up delay-1 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
+        Capture Moments, Create Memories.
+      </h2>
+
+      <p class="fade-up delay-2 text-sm sm:text-base md:text-lg">
+        Let’s make your wedding memories timeless and beautiful.
+      </p>
+
       <a href="#"
-        class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg opacity-0 transform translate-y-8 transition-all">Book
-        Your Session</a>
+        class="fade-up delay-3 bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg transition">
+        Book Your Session
+      </a>
     </div>
   </section>
 
@@ -101,24 +152,18 @@
     <div class="container mx-auto px-4 sm:px-6 text-center">
       <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">Wedding Moments</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
-          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-          alt="">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
-          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-          alt="">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
-          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-          alt="">
-        <img src="https://images.unsplash.com/photo-1522673607200-164d8b25c0f9?auto=format&fit=crop&w=800&q=80"
-          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-          alt="">
-        <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265?auto=format&fit=crop&w=800&q=80"
-          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-          alt="">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
-          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
-          alt="">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d8b25c0f9"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform">
+        <img src="https://images.unsplash.com/photo-1515669097368-22e68427d265"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform">
       </div>
     </div>
   </section>
@@ -130,17 +175,16 @@
       <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">Ready to capture your special day? Let’s make memories
         together.</p>
       <a href="mailto:samirphotography@email.com"
-        class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg transition-all">Contact
-        Me</a>
+        class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-lg transition-all">
+        Contact Me
+      </a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-[#1F2937] text-gray-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-      <!-- Footer grid -->
       <div class="grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-8">
-
-        <!-- Brand Info -->
         <div class="flex flex-col space-y-2">
           <div class="flex items-center space-x-2">
             <div class="bg-pink-500 text-white font-semibold rounded-full h-8 w-8 flex items-center justify-center">SP
@@ -156,7 +200,6 @@
           </p>
         </div>
 
-        <!-- Quick Links -->
         <div>
           <h3 class="font-bold text-white mb-2 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
           <ul class="space-y-1 sm:space-y-2 text-white text-xs sm:text-sm">
@@ -166,7 +209,6 @@
           </ul>
         </div>
 
-        <!-- Services -->
         <div>
           <h3 class="font-bold text-white mb-2 sm:mb-4 text-sm sm:text-base">Services</h3>
           <ul class="space-y-1 sm:space-y-2 text-white text-xs sm:text-sm">
@@ -176,7 +218,6 @@
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div>
           <h3 class="font-bold text-white mb-2 sm:mb-4 text-sm sm:text-base">Get In Touch</h3>
           <ul class="space-y-1 sm:space-y-2 text-white text-xs sm:text-sm">
@@ -188,7 +229,6 @@
         </div>
       </div>
 
-      <!-- Bottom Bar -->
       <div
         class="border-t border-gray-700 pt-4 mt-4 flex flex-col sm:flex-row justify-between text-xs sm:text-sm text-gray-400 gap-2 sm:gap-0">
         <p>&copy; 2025 Samir Photography. All rights reserved.</p>
@@ -200,15 +240,17 @@
     </div>
   </footer>
 
+  <!-- Script -->
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const elements = document.querySelectorAll('.animate-fade-up > *');
-      elements.forEach((el, i) => {
-        setTimeout(() => {
-          el.classList.remove('opacity-0', 'translate-y-8');
-          el.classList.add('opacity-100', 'translate-y-0', 'transition-all', 'duration-1000', 'ease-out');
-        }, i * 300); // staggered animation
-      });
+    document.addEventListener("DOMContentLoaded", () => {
+      const heroBG = document.querySelector(".hero-bg");
+
+      const img = new Image();
+      img.src = "/asset/images/home.jpg";
+
+      img.onload = () => {
+        heroBG.classList.add("loaded");
+      };
     });
 
     const menuBtn = document.getElementById('menu-btn');
